@@ -11,11 +11,14 @@ import AVFoundation
 
 class SignalProvider: NSObject {
     
-    func allProviders() -> [SignalProviderItem]? {
+    func allProviders() -> [SignalProviderItem] {
 
-        let captureDevices = AVCaptureDevice.devices(withMediaType: AVMediaTypeVideo)
-        print("Found \(captureDevices?.count) devices")
-        return [DefaultCameraProvider()]
+        let captureDevices = AVCaptureDevice.devices(withMediaType: AVMediaTypeVideo) as! [AVCaptureDevice]
+        
+        let providers = captureDevices.map() { return DefaultCameraProvider.provider(withCaptureDevice: $0 ) }
+        
+        print("Found \(providers.count) devices")
+        return providers
     }
     /*
     func setupCameraSession() {

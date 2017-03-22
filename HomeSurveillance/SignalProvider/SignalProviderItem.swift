@@ -13,7 +13,7 @@ protocol SignalProviderItem {
     
     static func provider(withCaptureDevice captureDevice: AVCaptureDevice) -> SignalProviderItem
     
-    func startPreview()
+    func startPreview() -> Bool
     func name() -> String
     
 }

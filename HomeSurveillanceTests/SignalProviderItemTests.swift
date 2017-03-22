@@ -35,5 +35,12 @@ class SignalProviderItemTests: XCTestCase {
         XCTAssertNotNil(item, "Provider should not be nil")
         XCTAssertFalse(item.name().isEmpty, "Provider should return name")
     }
+    
+    func testPreviewCanBeExecuted() {
+        let captureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo) as AVCaptureDevice
+        let item = DefaultCameraProvider.provider(withCaptureDevice: captureDevice)
+        XCTAssertNotNil(item, "Provider should not be nil")
+        XCTAssertTrue(item.startPreview(), "Provider should be able to start capture")
+    }
 
 }

@@ -16,7 +16,11 @@ class HomeViewController: NSViewController {
         super.viewDidLoad()
         // Do view setup here.
         
-        
+        let providers = SignalProvider().allProviders()
+        providersPopUp.removeAllItems()
+
+        for providerItem in providers {
+            providersPopUp.addItem(withTitle: providerItem.name())
+        }
     }
-    
 }

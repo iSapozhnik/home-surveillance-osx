@@ -26,11 +26,8 @@ class SignalProviderTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
         let provider = SignalProvider()
-        if let providers = provider.allProviders() {
-            XCTAssertTrue(providers.count >= 1, "SignalProvider sould return at leat one provider")
-        } else {
-            XCTFail("SignalProvider sould not be nil")
-        }
+        let providers = provider.allProviders()
+        XCTAssertTrue(providers.count >= 1, "SignalProvider sould return at least one provider")
     }
 
 }
