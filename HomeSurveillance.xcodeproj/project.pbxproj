@@ -11,6 +11,13 @@
 		FF68A4C71E830BC1003B2078 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF68A4C61E830BC1003B2078 /* Assets.xcassets */; };
 		FF68A4CA1E830BC1003B2078 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF68A4C81E830BC1003B2078 /* MainMenu.xib */; };
 		FF68A4D51E830BC2003B2078 /* HomeSurveillanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68A4D41E830BC2003B2078 /* HomeSurveillanceTests.swift */; };
+		FF68A4E21E8328C9003B2078 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68A4E01E8328C9003B2078 /* HomeViewController.swift */; };
+		FF68A4E31E8328C9003B2078 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF68A4E11E8328C9003B2078 /* HomeViewController.xib */; };
+		FF68A4E61E8329C7003B2078 /* SignalProviderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68A4E51E8329C7003B2078 /* SignalProviderItem.swift */; };
+		FF68A4E81E832B17003B2078 /* SignalProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68A4E71E832B17003B2078 /* SignalProvider.swift */; };
+		FF68A4EA1E832B48003B2078 /* DefaultCameraProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68A4E91E832B48003B2078 /* DefaultCameraProvider.swift */; };
+		FF68A4EC1E832BA4003B2078 /* SignalProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68A4EB1E832BA4003B2078 /* SignalProviderTests.swift */; };
+		FF68A4EE1E833598003B2078 /* SignalProviderItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68A4ED1E833598003B2078 /* SignalProviderItemTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +39,13 @@
 		FF68A4D01E830BC2003B2078 /* HomeSurveillanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeSurveillanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF68A4D41E830BC2003B2078 /* HomeSurveillanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSurveillanceTests.swift; sourceTree = "<group>"; };
 		FF68A4D61E830BC2003B2078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF68A4E01E8328C9003B2078 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FF68A4E11E8328C9003B2078 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		FF68A4E51E8329C7003B2078 /* SignalProviderItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignalProviderItem.swift; sourceTree = "<group>"; };
+		FF68A4E71E832B17003B2078 /* SignalProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignalProvider.swift; sourceTree = "<group>"; };
+		FF68A4E91E832B48003B2078 /* DefaultCameraProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultCameraProvider.swift; sourceTree = "<group>"; };
+		FF68A4EB1E832BA4003B2078 /* SignalProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignalProviderTests.swift; sourceTree = "<group>"; };
+		FF68A4ED1E833598003B2078 /* SignalProviderItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignalProviderItemTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				FF68A4C41E830BC1003B2078 /* AppDelegate.swift */,
+				FF68A4DF1E8328A1003B2078 /* Controllers */,
+				FF68A4E41E8329B7003B2078 /* SignalProvider */,
 				FF68A4C61E830BC1003B2078 /* Assets.xcassets */,
 				FF68A4C81E830BC1003B2078 /* MainMenu.xib */,
 				FF68A4CB1E830BC1003B2078 /* Info.plist */,
@@ -85,9 +101,30 @@
 			isa = PBXGroup;
 			children = (
 				FF68A4D41E830BC2003B2078 /* HomeSurveillanceTests.swift */,
+				FF68A4EB1E832BA4003B2078 /* SignalProviderTests.swift */,
+				FF68A4ED1E833598003B2078 /* SignalProviderItemTests.swift */,
 				FF68A4D61E830BC2003B2078 /* Info.plist */,
 			);
 			path = HomeSurveillanceTests;
+			sourceTree = "<group>";
+		};
+		FF68A4DF1E8328A1003B2078 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FF68A4E01E8328C9003B2078 /* HomeViewController.swift */,
+				FF68A4E11E8328C9003B2078 /* HomeViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FF68A4E41E8329B7003B2078 /* SignalProvider */ = {
+			isa = PBXGroup;
+			children = (
+				FF68A4E71E832B17003B2078 /* SignalProvider.swift */,
+				FF68A4E91E832B48003B2078 /* DefaultCameraProvider.swift */,
+				FF68A4E51E8329C7003B2078 /* SignalProviderItem.swift */,
+			);
+			path = SignalProvider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +212,7 @@
 			files = (
 				FF68A4C71E830BC1003B2078 /* Assets.xcassets in Resources */,
 				FF68A4CA1E830BC1003B2078 /* MainMenu.xib in Resources */,
+				FF68A4E31E8328C9003B2078 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,7 +230,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF68A4E81E832B17003B2078 /* SignalProvider.swift in Sources */,
+				FF68A4EA1E832B48003B2078 /* DefaultCameraProvider.swift in Sources */,
 				FF68A4C51E830BC1003B2078 /* AppDelegate.swift in Sources */,
+				FF68A4E61E8329C7003B2078 /* SignalProviderItem.swift in Sources */,
+				FF68A4E21E8328C9003B2078 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +242,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF68A4EE1E833598003B2078 /* SignalProviderItemTests.swift in Sources */,
+				FF68A4EC1E832BA4003B2078 /* SignalProviderTests.swift in Sources */,
 				FF68A4D51E830BC2003B2078 /* HomeSurveillanceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
