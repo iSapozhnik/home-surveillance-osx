@@ -14,5 +14,5 @@ language: objective-c
 # - gem install cocoapods # Since Travis is not always on latest version
 # - pod install --project-directory=Example
 script:
-- set -o pipefail && xcodebuild test -project HomeSurveillance.xcodeproj -scheme HomeSurveillance | xcpretty
+- xcodebuild clean build test -project HomeSurveillance.xcodeproj -scheme HomeSurveillance | xcpretty
 #- pod lib lint
