@@ -24,6 +24,10 @@ class HomeSurveillanceTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let a = 1
+        let b = 2
+        let c = a + b
+        XCTAssertEqual(c, 3, "Expressions are not equal")
     }
     
     func testPerformanceExample() {
