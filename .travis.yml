@@ -7,7 +7,7 @@
 #xcode_scheme: MyNewProjectTests
 
 osx_image: xcode8.2
-language: swift
+language: objective-c
 # cache: cocoapods
 # podfile: Example/Podfile
 # before_install:
