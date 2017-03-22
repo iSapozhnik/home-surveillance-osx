@@ -2,6 +2,10 @@
 # * http://www.objc.io/issue-6/travis-ci.html
 # * https://github.com/supermarin/xcpretty#usage
 
+#language: objective-c
+#xcode_project: .xcodeproj # path to your xcodeproj folder
+#xcode_scheme: MyNewProjectTests
+
 osx_image: xcode8.2
 language: swift
 # cache: cocoapods
@@ -10,5 +14,5 @@ language: swift
 # - gem install cocoapods # Since Travis is not always on latest version
 # - pod install --project-directory=Example
 script:
-- set -o pipefail && xcodebuild test -workspace Example/LoadingViewController.xcworkspace -scheme LoadingViewController-Example -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO | xcpretty
-- pod lib lint
+- set -o pipefail && xcodebuild test -project HomeSurveillance.xcodeproj -scheme HomeSurveillance | xcpretty
+#- pod lib lint
