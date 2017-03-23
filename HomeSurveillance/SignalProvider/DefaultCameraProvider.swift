@@ -13,10 +13,14 @@ class DefaultCameraProvider: SignalProviderItem {
     
     var captureDevice: AVCaptureDevice!
     
-    static func provider(withCaptureDevice device: AVCaptureDevice) -> SignalProviderItem {
-        let provider = DefaultCameraProvider()
-        provider.captureDevice = device
-        return provider
+    static func provider(withCaptureDevice device: AVCaptureDevice?) -> SignalProviderItem {
+        if let device = device {
+            let provider = DefaultCameraProvider()
+            provider.captureDevice = device
+            return provider
+        } else {
+            return nil
+        }
     }
     
     func startPreview() -> Bool {
