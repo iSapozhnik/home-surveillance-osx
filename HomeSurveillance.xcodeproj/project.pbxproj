@@ -17,6 +17,7 @@
 		FF68A4EA1E832B48003B2078 /* DefaultCameraProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68A4E91E832B48003B2078 /* DefaultCameraProvider.swift */; };
 		FF68A4EC1E832BA4003B2078 /* SignalProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68A4EB1E832BA4003B2078 /* SignalProviderTests.swift */; };
 		FF68A4EE1E833598003B2078 /* SignalProviderItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68A4ED1E833598003B2078 /* SignalProviderItemTests.swift */; };
+		FF68A4F01E83B85D003B2078 /* DebugCameraProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68A4EF1E83B85D003B2078 /* DebugCameraProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		FF68A4E91E832B48003B2078 /* DefaultCameraProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultCameraProvider.swift; sourceTree = "<group>"; };
 		FF68A4EB1E832BA4003B2078 /* SignalProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignalProviderTests.swift; sourceTree = "<group>"; };
 		FF68A4ED1E833598003B2078 /* SignalProviderItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignalProviderItemTests.swift; sourceTree = "<group>"; };
+		FF68A4EF1E83B85D003B2078 /* DebugCameraProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugCameraProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			children = (
 				FF68A4E71E832B17003B2078 /* SignalProvider.swift */,
 				FF68A4E91E832B48003B2078 /* DefaultCameraProvider.swift */,
+				FF68A4EF1E83B85D003B2078 /* DebugCameraProvider.swift */,
 				FF68A4E51E8329C7003B2078 /* SignalProviderItem.swift */,
 			);
 			path = SignalProvider;
@@ -228,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF68A4E81E832B17003B2078 /* SignalProvider.swift in Sources */,
+				FF68A4F01E83B85D003B2078 /* DebugCameraProvider.swift in Sources */,
 				FF68A4EA1E832B48003B2078 /* DefaultCameraProvider.swift in Sources */,
 				FF68A4C51E830BC1003B2078 /* AppDelegate.swift in Sources */,
 				FF68A4E61E8329C7003B2078 /* SignalProviderItem.swift in Sources */,
@@ -309,6 +313,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -351,6 +356,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_SWIFT_FLAGS = "";
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
@@ -374,7 +380,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTABILITY = NO;
 				INFOPLIST_FILE = HomeSurveillance/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.isapozhnik.HomeSurveillance;
