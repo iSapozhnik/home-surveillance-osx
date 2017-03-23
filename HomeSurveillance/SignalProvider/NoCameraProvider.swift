@@ -9,14 +9,14 @@
 import Cocoa
 import AVFoundation
 
-class DebugCameraProvider: SignalProviderItem {
+class NoCameraProvider: SignalProviderItem {
     
     static func provider(withCaptureDevice device: AVCaptureDevice?) -> SignalProviderItem {
-        return DebugCameraProvider()
+        return NoCameraProvider()
     }
     
     func startPreview() -> Bool {
-        return true
+        return false
     }
     
     func name() -> String {

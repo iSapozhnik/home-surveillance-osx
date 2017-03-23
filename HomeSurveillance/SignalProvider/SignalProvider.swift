@@ -29,9 +29,14 @@ class SignalProvider: NSObject {
 
         let captureDevices = AVCaptureDevice.devices(withMediaType: AVMediaTypeVideo) as! [AVCaptureDevice]
         
-        let providers = captureDevices.map() { return DefaultCameraProvider.provider(withCaptureDevice: $0 ) }
+        if !captureDevices.isEmpty {
+            let providers = captureDevices.map() { return DefaultCameraProvider.provider(withCaptureDevice: $0 ) }
         
-        return providers
+            return providers
+            
+        } else {
+            return [NoCameraProvider.provider(withCaptureDevice: nil)]
+        }
     }
     
     /*
