@@ -11,7 +11,7 @@ import AVFoundation
 
 protocol SignalProviderItem {
     
-    static func provider(withCaptureDevice captureDevice: AVCaptureDevice?) -> SignalProviderItem
+    static func provider(withCaptureDevice captureDevice: AVCaptureDevice) -> SignalProviderItem
     
     func startPreview() -> Bool
     func name() -> String

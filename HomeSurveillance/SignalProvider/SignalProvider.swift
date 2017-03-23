@@ -12,6 +12,9 @@ import AVFoundation
 class SignalProvider: NSObject {
     
     func startMonitoring(onUpdate: @escaping (SignalProvider) -> ()) {
+        
+        //FIXME: remove observer
+        
         NotificationCenter.default
             .addObserver(forName: NSNotification.Name.AVCaptureDeviceWasDisconnected, object: nil, queue: nil)
             { (notif) -> Void in
@@ -35,7 +38,7 @@ class SignalProvider: NSObject {
             return providers
             
         } else {
-            return [NoCameraProvider.provider(withCaptureDevice: nil)]
+            return [NoCameraProvider()]
         }
     }
     

@@ -17,7 +17,7 @@ class HomeViewController: NSViewController {
         // Do view setup here.
         
         let provider = SignalProvider()
-        provider.startMonitoring { (provider) in
+        provider.startMonitoring { [unowned self] (provider) in
             self.updatePopUpMenu(withProvider: provider)
         }
         updatePopUpMenu(withProvider: provider)

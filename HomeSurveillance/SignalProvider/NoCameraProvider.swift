@@ -11,7 +11,7 @@ import AVFoundation
 
 class NoCameraProvider: SignalProviderItem {
     
-    static func provider(withCaptureDevice device: AVCaptureDevice?) -> SignalProviderItem {
+    static func provider(withCaptureDevice device: AVCaptureDevice) -> SignalProviderItem {
         return NoCameraProvider()
     }
     
