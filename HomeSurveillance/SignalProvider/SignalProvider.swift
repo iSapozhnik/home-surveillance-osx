@@ -31,9 +31,9 @@ class SignalProvider: NSObject {
         
         let providers = captureDevices.map() { return DefaultCameraProvider.provider(withCaptureDevice: $0 ) }
         
-        print("Found \(providers.count) devices")
         return providers
     }
+    
     /*
     func setupCameraSession() {
         let captureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo) as AVCaptureDevice

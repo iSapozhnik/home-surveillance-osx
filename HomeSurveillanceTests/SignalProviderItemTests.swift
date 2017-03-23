@@ -24,22 +24,46 @@ class SignalProviderItemTests: XCTestCase {
     }
 
     func testCreatingSignalProviderItem() {
-        let captureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo) as AVCaptureDevice
-        let item = DefaultCameraProvider.provider(withCaptureDevice: captureDevice)
-        XCTAssertNotNil(item, "Provider should not be nil")
+        
+        if let captureDevice = captureDevice() {
+            let item = DefaultCameraProvider.provider(withCaptureDevice: captureDevice)
+            XCTAssertNotNil(item, "Provider should not be nil")
+        }
     }
     
     func testProviderHasName() {
-        let captureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo) as AVCaptureDevice
-        let item = DefaultCameraProvider.provider(withCaptureDevice: captureDevice)
-        XCTAssertNotNil(item, "Provider should not be nil")
-        XCTAssertFalse(item.name().isEmpty, "Provider should return name")
+        
+        if let captureDevice = captureDevice() {
+            let item = DefaultCameraProvider.provider(withCaptureDevice: captureDevice)
+            XCTAssertNotNil(item, "Provider should not be nil")
+            XCTAssertFalse(item.name().isEmpty, "Provider should return name")
+        }
     }
     
     func testPreviewCanBeExecuted() {
-        let captureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo) as AVCaptureDevice
-        let item = DefaultCameraProvider.provider(withCaptureDevice: captureDevice)
-        XCTAssertNotNil(item, "Provider should not be nil")
-        XCTAssertTrue(item.startPreview(), "Provider should be able to start capture")
+        
+        if let captureDevice = captureDevice() {
+            let item = DefaultCameraProvider.provider(withCaptureDevice: captureDevice)
+            XCTAssertNotNil(item, "Provider should not be nil")
+            XCTAssertTrue(item.startPreview(), "Provider should be able to start capture")
+        }
+    }
+    
+    func captureDevice() -> AVCaptureDevice? {
+        
+        let captureDevices = AVCaptureDevice.devices(withMediaType: AVMediaTypeVideo) as! [AVCaptureDevice]
+        
+        if !captureDevices.isEmpty {
+        
+            if let captureDevice = captureDevices.first {
+                return captureDevice
+            } else {
+                return nil
+            }
+        
+        } else {
+        
+            return nil
+        }
     }
 }
