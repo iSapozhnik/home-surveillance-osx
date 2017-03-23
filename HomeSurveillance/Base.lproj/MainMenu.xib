@@ -708,7 +708,7 @@
                         <rect key="frame" x="0.0" y="50" width="480" height="254"/>
                     </customView>
                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uiq-Wb-97h">
-                        <rect key="frame" x="157" y="319" width="306" height="26"/>
+                        <rect key="frame" x="157" y="319" width="261" height="26"/>
                         <popUpButtonCell key="cell" type="push" title="Default" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="ZyD-0A-juC" id="1ry-2u-Avf">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="menu"/>
@@ -729,16 +729,29 @@
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                     </button>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nir-Rl-Gft">
+                        <rect key="frame" x="429" y="315" width="37" height="32"/>
+                        <buttonCell key="cell" type="push" title="+" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ppw-yf-TT0">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="onAdd:" target="PeQ-dX-U09" id="pIv-IM-D9X"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="nir-Rl-Gft" secondAttribute="trailing" constant="20" id="1O8-mx-YD7"/>
                     <constraint firstItem="uiq-Wb-97h" firstAttribute="leading" secondItem="G7j-g8-JGO" secondAttribute="trailing" constant="20" id="8eX-LX-TYF"/>
                     <constraint firstItem="nHM-yB-qS0" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="C5D-RR-sts"/>
                     <constraint firstItem="wjW-Gi-oCQ" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="F2U-20-fsN"/>
                     <constraint firstAttribute="bottom" secondItem="nHM-yB-qS0" secondAttribute="bottom" constant="20" id="Fx7-07-YZE"/>
+                    <constraint firstItem="nir-Rl-Gft" firstAttribute="leading" secondItem="uiq-Wb-97h" secondAttribute="trailing" constant="20" id="L8g-Mg-zZv"/>
                     <constraint firstItem="wjW-Gi-oCQ" firstAttribute="top" secondItem="G7j-g8-JGO" secondAttribute="bottom" constant="20" id="O1G-pQ-tl6"/>
                     <constraint firstItem="uiq-Wb-97h" firstAttribute="centerY" secondItem="G7j-g8-JGO" secondAttribute="centerY" id="Uoy-DO-8Gh"/>
-                    <constraint firstAttribute="trailing" secondItem="uiq-Wb-97h" secondAttribute="trailing" constant="20" id="WAp-Ig-08a"/>
+                    <constraint firstAttribute="trailing" secondItem="uiq-Wb-97h" secondAttribute="trailing" constant="65" id="WAp-Ig-08a"/>
                     <constraint firstAttribute="trailing" secondItem="wjW-Gi-oCQ" secondAttribute="trailing" id="Xsd-oj-IWz"/>
+                    <constraint firstItem="nir-Rl-Gft" firstAttribute="centerY" secondItem="uiq-Wb-97h" secondAttribute="centerY" id="fdX-Fk-eA3"/>
                     <constraint firstAttribute="bottom" secondItem="wjW-Gi-oCQ" secondAttribute="bottom" constant="50" id="rRk-bK-xP1"/>
                     <constraint firstItem="G7j-g8-JGO" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="reI-46-glZ"/>
                     <constraint firstItem="G7j-g8-JGO" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="19" id="sWs-Vk-yJq"/>
