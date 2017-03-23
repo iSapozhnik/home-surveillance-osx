@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import Cocoa
 import AVFoundation
 
 @testable import HomeSurveillance
@@ -44,8 +45,9 @@ class SignalProviderItemTests: XCTestCase {
         
         if let captureDevice = captureDevice() {
             let item = DefaultCameraProvider.provider(withCaptureDevice: captureDevice)
+            let view = PreviewView()
             XCTAssertNotNil(item, "Provider should not be nil")
-            XCTAssertTrue(item.startPreview(), "Provider should be able to start capture")
+            XCTAssertTrue(item.startPreview(forView: view), "Provider should be able to start capture")
         }
     }
     

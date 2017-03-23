@@ -16,7 +16,7 @@ class NoCameraProvider: SignalProviderItem {
     }
     
     func startPreview(forView view: PreviewView) -> Bool {
-        return false
+        return true
     }
     
     func name() -> String {
