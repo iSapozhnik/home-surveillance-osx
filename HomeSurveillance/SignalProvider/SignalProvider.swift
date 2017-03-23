@@ -39,8 +39,6 @@ class SignalProvider: NSObject {
             print("Found \(providers.count) devices")
             return providers
         #endif
-        
-        
     }
     /*
     func setupCameraSession() {

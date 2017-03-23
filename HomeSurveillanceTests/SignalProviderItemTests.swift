@@ -42,5 +42,4 @@ class SignalProviderItemTests: XCTestCase {
         XCTAssertNotNil(item, "Provider should not be nil")
         XCTAssertTrue(item.startPreview(), "Provider should be able to start capture")
     }
-
 }

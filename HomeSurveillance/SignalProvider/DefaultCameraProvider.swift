@@ -19,7 +19,7 @@ class DefaultCameraProvider: SignalProviderItem {
             provider.captureDevice = device
             return provider
         } else {
-            return nil
+            return DefaultCameraProvider()
         }
     }
     
@@ -28,7 +28,11 @@ class DefaultCameraProvider: SignalProviderItem {
     }
     
     func name() -> String {
-        let manufacturer = captureDevice.manufacturer != nil ? captureDevice.manufacturer! : ""
-        return manufacturer.isEmpty ? captureDevice.localizedName : captureDevice.localizedName + " (\(manufacturer))"
+        if captureDevice != nil {
+            let manufacturer = captureDevice.manufacturer != nil ? captureDevice.manufacturer! : ""
+            return manufacturer.isEmpty ? captureDevice.localizedName : captureDevice.localizedName + " (\(manufacturer))"
+        } else {
+            return "No device"
+        }
     }
 }
