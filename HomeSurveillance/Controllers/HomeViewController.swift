@@ -16,9 +16,18 @@ class HomeViewController: NSViewController {
         super.viewDidLoad()
         // Do view setup here.
         
-        let providers = SignalProvider().allProviders()
+        let provider = SignalProvider()
+        provider.startMonitoring { (provider) in
+            self.updatePopUpMenu(withProvider: provider)
+        }
+        updatePopUpMenu(withProvider: provider)
+        
+    }
+    
+    fileprivate func updatePopUpMenu(withProvider provider: SignalProvider) {
+        let providers = provider.allProviders()
         providersPopUp.removeAllItems()
-
+        
         for providerItem in providers {
             providersPopUp.addItem(withTitle: providerItem.name())
         }

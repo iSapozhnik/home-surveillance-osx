@@ -11,6 +11,20 @@ import AVFoundation
 
 class SignalProvider: NSObject {
     
+    func startMonitoring(onUpdate: @escaping (SignalProvider) -> ()) {
+        NotificationCenter.default
+            .addObserver(forName: NSNotification.Name.AVCaptureDeviceWasDisconnected, object: nil, queue: nil)
+            { (notif) -> Void in
+                onUpdate(self)
+        }
+        
+        NotificationCenter.default
+            .addObserver(forName: NSNotification.Name.AVCaptureDeviceWasConnected, object: nil, queue: nil)
+            { (notif) -> Void in
+                onUpdate(self)
+        }
+    }
+    
     func allProviders() -> [SignalProviderItem] {
 
         let captureDevices = AVCaptureDevice.devices(withMediaType: AVMediaTypeVideo) as! [AVCaptureDevice]
