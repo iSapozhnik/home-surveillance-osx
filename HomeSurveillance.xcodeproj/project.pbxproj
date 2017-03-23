@@ -18,6 +18,7 @@
 		FF68A4EC1E832BA4003B2078 /* SignalProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68A4EB1E832BA4003B2078 /* SignalProviderTests.swift */; };
 		FF68A4EE1E833598003B2078 /* SignalProviderItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68A4ED1E833598003B2078 /* SignalProviderItemTests.swift */; };
 		FF68A4F01E83B85D003B2078 /* NoCameraProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68A4EF1E83B85D003B2078 /* NoCameraProvider.swift */; };
+		FFA7DAB61E845EFF004E1276 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA7DAB51E845EFF004E1276 /* PreviewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		FF68A4EB1E832BA4003B2078 /* SignalProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignalProviderTests.swift; sourceTree = "<group>"; };
 		FF68A4ED1E833598003B2078 /* SignalProviderItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignalProviderItemTests.swift; sourceTree = "<group>"; };
 		FF68A4EF1E83B85D003B2078 /* NoCameraProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoCameraProvider.swift; sourceTree = "<group>"; };
+		FFA7DAB51E845EFF004E1276 /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			children = (
 				FF68A4C41E830BC1003B2078 /* AppDelegate.swift */,
 				FF68A4DF1E8328A1003B2078 /* Controllers */,
+				FFA7DAB41E845EE4004E1276 /* Views */,
 				FF68A4E41E8329B7003B2078 /* SignalProvider */,
 				FF68A4C61E830BC1003B2078 /* Assets.xcassets */,
 				FF68A4C81E830BC1003B2078 /* MainMenu.xib */,
@@ -125,6 +128,14 @@
 				FF68A4E51E8329C7003B2078 /* SignalProviderItem.swift */,
 			);
 			path = SignalProvider;
+			sourceTree = "<group>";
+		};
+		FFA7DAB41E845EE4004E1276 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FFA7DAB51E845EFF004E1276 /* PreviewView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +243,7 @@
 			files = (
 				FF68A4E81E832B17003B2078 /* SignalProvider.swift in Sources */,
 				FF68A4F01E83B85D003B2078 /* NoCameraProvider.swift in Sources */,
+				FFA7DAB61E845EFF004E1276 /* PreviewView.swift in Sources */,
 				FF68A4EA1E832B48003B2078 /* DefaultCameraProvider.swift in Sources */,
 				FF68A4C51E830BC1003B2078 /* AppDelegate.swift in Sources */,
 				FF68A4E61E8329C7003B2078 /* SignalProviderItem.swift in Sources */,

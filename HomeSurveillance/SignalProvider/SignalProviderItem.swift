@@ -6,14 +6,14 @@
 //  Copyright © 2017 Sapozhnik Ivan. All rights reserved.
 //
 
-import Foundation
+import Cocoa
 import AVFoundation
 
 protocol SignalProviderItem {
     
     static func provider(withCaptureDevice captureDevice: AVCaptureDevice) -> SignalProviderItem
     
-    func startPreview() -> Bool
+    @discardableResult func startPreview(forView view: PreviewView) -> Bool
     func name() -> String
     
 }

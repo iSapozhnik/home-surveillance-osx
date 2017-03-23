@@ -19,7 +19,24 @@ class DefaultCameraProvider: SignalProviderItem {
         return provider
     }
     
-    func startPreview() -> Bool {
+    func startPreview(forView view: PreviewView) -> Bool {
+        
+        let session = AVCaptureSession()
+        let input = (try! AVCaptureDeviceInput(device: captureDevice))
+        let output = AVCaptureVideoDataOutput()
+        
+        session.addOutput(output)
+        session.addInput(input)
+        
+        let layerPreview = AVCaptureVideoPreviewLayer(session: session)
+        layerPreview?.videoGravity = AVLayerVideoGravityResizeAspectFill
+        layerPreview?.frame = view.bounds
+        
+        view.layer = layerPreview
+        view.wantsLayer = true
+        
+        session.startRunning()
+        
         return true
     }
     

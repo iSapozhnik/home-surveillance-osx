@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1217" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -20,6 +21,7 @@
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <viewController id="PeQ-dX-U09" customClass="HomeViewController" customModule="HomeSurveillance" customModuleProvider="target">
             <connections>
+                <outlet property="previewView" destination="wjW-Gi-oCQ" id="EED-k1-7zR"/>
                 <outlet property="providersPopUp" destination="uiq-Wb-97h" id="fcJ-5b-y8J"/>
                 <outlet property="view" destination="EiT-Mj-1SZ" id="2hZ-kk-C4B"/>
             </connections>
@@ -689,7 +691,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="480" height="360"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -702,8 +704,8 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="wjW-Gi-oCQ">
-                        <rect key="frame" x="20" y="50" width="440" height="254"/>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="wjW-Gi-oCQ" customClass="PreviewView" customModule="HomeSurveillance" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="50" width="480" height="254"/>
                     </customView>
                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uiq-Wb-97h">
                         <rect key="frame" x="157" y="319" width="306" height="26"/>
@@ -716,6 +718,9 @@
                                 </items>
                             </menu>
                         </popUpButtonCell>
+                        <connections>
+                            <action selector="onChangeProvider:" target="PeQ-dX-U09" id="2Yq-MF-1ym"/>
+                        </connections>
                     </popUpButton>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nHM-yB-qS0">
                         <rect key="frame" x="14" y="13" width="112" height="32"/>
@@ -728,12 +733,12 @@
                 <constraints>
                     <constraint firstItem="uiq-Wb-97h" firstAttribute="leading" secondItem="G7j-g8-JGO" secondAttribute="trailing" constant="20" id="8eX-LX-TYF"/>
                     <constraint firstItem="nHM-yB-qS0" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="C5D-RR-sts"/>
-                    <constraint firstItem="wjW-Gi-oCQ" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="F2U-20-fsN"/>
+                    <constraint firstItem="wjW-Gi-oCQ" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" id="F2U-20-fsN"/>
                     <constraint firstAttribute="bottom" secondItem="nHM-yB-qS0" secondAttribute="bottom" constant="20" id="Fx7-07-YZE"/>
                     <constraint firstItem="wjW-Gi-oCQ" firstAttribute="top" secondItem="G7j-g8-JGO" secondAttribute="bottom" constant="20" id="O1G-pQ-tl6"/>
                     <constraint firstItem="uiq-Wb-97h" firstAttribute="centerY" secondItem="G7j-g8-JGO" secondAttribute="centerY" id="Uoy-DO-8Gh"/>
                     <constraint firstAttribute="trailing" secondItem="uiq-Wb-97h" secondAttribute="trailing" constant="20" id="WAp-Ig-08a"/>
-                    <constraint firstAttribute="trailing" secondItem="wjW-Gi-oCQ" secondAttribute="trailing" constant="20" id="Xsd-oj-IWz"/>
+                    <constraint firstAttribute="trailing" secondItem="wjW-Gi-oCQ" secondAttribute="trailing" id="Xsd-oj-IWz"/>
                     <constraint firstAttribute="bottom" secondItem="wjW-Gi-oCQ" secondAttribute="bottom" constant="50" id="rRk-bK-xP1"/>
                     <constraint firstItem="G7j-g8-JGO" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="reI-46-glZ"/>
                     <constraint firstItem="G7j-g8-JGO" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="19" id="sWs-Vk-yJq"/>
