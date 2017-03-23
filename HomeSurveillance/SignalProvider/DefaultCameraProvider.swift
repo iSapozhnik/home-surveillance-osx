@@ -11,7 +11,7 @@ import AVFoundation
 
 class DefaultCameraProvider: SignalProviderItem {
     
-    var captureDevice: AVCaptureDevice!
+    var captureDevice: AVCaptureDevice?
     
     static func provider(withCaptureDevice device: AVCaptureDevice?) -> SignalProviderItem {
         if let device = device {
@@ -19,7 +19,7 @@ class DefaultCameraProvider: SignalProviderItem {
             provider.captureDevice = device
             return provider
         } else {
-            return DefaultCameraProvider()
+            return DebugCameraProvider()
         }
     }
     
@@ -28,7 +28,7 @@ class DefaultCameraProvider: SignalProviderItem {
     }
     
     func name() -> String {
-        if captureDevice != nil {
+        if let captureDevice = captureDevice {
             let manufacturer = captureDevice.manufacturer != nil ? captureDevice.manufacturer! : ""
             return manufacturer.isEmpty ? captureDevice.localizedName : captureDevice.localizedName + " (\(manufacturer))"
         } else {

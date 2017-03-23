@@ -27,18 +27,12 @@ class SignalProvider: NSObject {
     
     func allProviders() -> [SignalProviderItem] {
 
-        #if DEBUG
-            print("I'm running in DEBUG mode")
-            return [DebugCameraProvider()]
-        #else
-            print("I'm running in a non-DEBUG mode")
-            let captureDevices = AVCaptureDevice.devices(withMediaType: AVMediaTypeVideo) as! [AVCaptureDevice]
-            
-            let providers = captureDevices.map() { return DefaultCameraProvider.provider(withCaptureDevice: $0 ) }
-            
-            print("Found \(providers.count) devices")
-            return providers
-        #endif
+        let captureDevices = AVCaptureDevice.devices(withMediaType: AVMediaTypeVideo) as! [AVCaptureDevice]
+        
+        let providers = captureDevices.map() { return DefaultCameraProvider.provider(withCaptureDevice: $0 ) }
+        
+        print("Found \(providers.count) devices")
+        return providers
     }
     /*
     func setupCameraSession() {
