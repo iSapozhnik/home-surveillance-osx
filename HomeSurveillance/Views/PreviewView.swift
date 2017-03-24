@@ -8,11 +8,12 @@
 
 import Cocoa
 import AVFoundation
+import AVKit
 
 /// A simple `NSView` subclass that is backed by an `AVPlayerLayer` layer.
 
-class PreviewView: NSView {
-
+class PreviewView: AVPlayerView {
+/*
     var player: AVPlayer? {
         get {
             return playerLayer.player
@@ -27,8 +28,9 @@ class PreviewView: NSView {
         return layer as! AVPlayerLayer
     }
     
-//    override class var layerClass: AnyClass {
-//        return AVPlayerLayer.self
-//    }
+    class var layerClass: AnyClass {
+        return AVPlayerLayer.self
+    }
+ */
     
 }
