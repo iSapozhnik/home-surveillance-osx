@@ -16,3 +16,6 @@ language: objective-c
 script:
 - xcodebuild clean build test -project HomeSurveillance.xcodeproj -scheme HomeSurveillance -configuration Debug | xcpretty && exit ${PIPESTATUS[0]}
 #- pod lib lint
+
+after_success:
+  - coveralls
