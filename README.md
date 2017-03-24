@@ -1,4 +1,4 @@
-![surveillance osx](https://github.com/iSapozhnik/home-surveillance-osx/blob/master/Resources/surveillance.png?raw=true)
+![surveillance osx](https://github.com/iSapozhnik/home-surveillance-osx/blob/master/Resources/surveillance_scaled.png?raw=true)
 
 # home-surveillance-osx
 OS X application
