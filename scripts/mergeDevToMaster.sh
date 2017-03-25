@@ -5,7 +5,7 @@ echo "*** THE CODE WILL WORK ONLY IF YOU ARE USING master AND development BRANCH
 echo
 
 git checkout master
-git merge --no-commit development
+git merge development --no-commit
 
 git add -A
 git commit -a -m "merge development -> master"
