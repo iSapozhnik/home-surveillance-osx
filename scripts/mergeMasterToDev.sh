@@ -10,3 +10,4 @@ git merge master --no-commit
 git add -A
 git commit -a -m "merge master -> development"
 git push
+git checkout master
