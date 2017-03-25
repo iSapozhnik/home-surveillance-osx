@@ -5,6 +5,7 @@ echo "*** THE CODE WILL WORK ONLY IF YOU ARE USING master AND development BRANCH
 echo
 
 git checkout master
+git pull
 git merge development --no-commit
 
 git add -A
