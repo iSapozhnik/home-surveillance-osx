@@ -1,0 +1,4 @@
+[https://www.hackster.io/linyi/security-camera-to-make-in-rpi2-and-webcam-f07953?ref=challenge&ref_id=15&offset=26](https://www.hackster.io/linyi/security-camera-to-make-in-rpi2-and-webcam-f07953?ref=challenge&ref_id=15&offset=26)
+[home visits manager](https://www.hackster.io/team-iot-geeks/home-visits-manager-84ce77?ref=challenge&ref_id=15&offset=24)
+[home surveillance system based on windows 10 iot and azure](https://www.hackster.io/JiongShi/home-surveillance-system-based-on-windows-10-iot-and-azure-774075?ref=challenge&ref_id=15&offset=23)
+[https://www.hackster.io/katpurz/motion-sensor-surveillance-camera-using-azure-cloud-storage-89550a?ref=challenge&ref_id=15&offset=10](https://www.hackster.io/katpurz/motion-sensor-surveillance-camera-using-azure-cloud-storage-89550a?ref=challenge&ref_id=15&offset=10)
